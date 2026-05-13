@@ -1,234 +1,165 @@
 <!doctype html>
 <html lang="uk">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-        />
-        <title>Forms</title>
-        <link
-            rel="stylesheet"
-            href="style.css"
-        />
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Rufina:wght@400;700&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
 
-    <body>
-        <!-- Створи форму реєстрації користувача. Форма повинна містити такі елементи:
-                    Повне ім’я
-                    Email
-                    Пароль
-                    Підтвердження пароля
-                    Стать (можна обрати один варіант)
-                    Вік
-                    Курс (спадний список із варіантами: Front-End, Back-End, Project Management, QA Manual)
-                    Повна адреса проживання
-                    Опція про погодження з умовами конфіденційності
-                    Кнопка «Зареєструватись»
-                    Зверни увагу, що форма повинна бути робоча, усі поля обов’язкові для заповнення, за натискання відправляються всі зазначені дані. Усі елементи мають необхідні атрибути зі вказаними коректними значеннями. -->
-        <!-- Створи html-сторінку, яка міститиме форму, поділену на логічні блоки. Форма повинна мати всі можливі елементи різних типів. -->
+  <body>
+    <header class="site-header">
+      <div class="container header-layout">
+        <!-- Accessible Brand Link -->
+        <a href="/" class="brand" aria-label="U Form System Home">
+          <!-- aria-hidden on the graphic element since the label reads it out -->
+          <span class="brand-logo" aria-hidden="true">U</span>
+          <span class="brand-text">FORM SYSTEM</span>
+        </a>
+        <!-- Semantic Navigation List -->
+        <nav class="main-nav" aria-label="Main Navigation">
+          <a href="./extra-form.html" class="nav-link">Далі</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content" class="container main-content">
+      <!-- Створи форму реєстрації користувача. Форма повинна містити такі елементи:
+                            Повне ім’я
+                            Email
+                            Пароль
+                            Підтвердження пароля
+                            Стать (можна обрати один варіант)
+                            Вік
+                            Курс (спадний список із варіантами: Front-End, Back-End, Project Management, QA Manual)
+                            Повна адреса проживання
+                            Опція про погодження з умовами конфіденційності
+                            Кнопка «Зареєструватись»
+                            Зверни увагу, що форма повинна бути робоча, усі поля обов’язкові для заповнення, за натискання відправляються всі зазначені дані. Усі елементи мають необхідні атрибути зі вказаними коректними значеннями. -->
+      <!-- Створи html-сторінку, яка міститиме форму, поділену на логічні блоки. Форма повинна мати всі можливі елементи різних типів. -->
 
-        <section>
-            <h1>Реєстрація нового користувача</h1>
-            <p class="sr-only">Будь ласка, заповніть усі поля, щоб створити обліковий запис.</p>
-            <form
-                action="."
-                method="POST"
-            >
-                <!-- Form  novalidate - Доступність (A11y): Коли ми використовуємо novalidate, ми самі керуємо атрибутами aria-invalid="true" та aria-describedby, що дозволяє скрінрідерам краще пояснювати користувачу, що саме він ввів не так.  Навіть з novalidate, такі атрибути як required, pattern, type="email" все одно працюють! Вони залишаються доступними для перевірки через JavaScript (form.checkValidity()), але просто перестають "бісити" користувача стандартними вікнами. -->
+      <section>
+        <h1>Реєстрація нового користувача</h1>
+        <p class="sr-only">Будь ласка, заповніть усі поля, щоб створити обліковий запис.</p>
+        <form action="." method="POST">
+          <!-- Form  novalidate - Доступність (A11y): Коли ми використовуємо novalidate, ми самі керуємо атрибутами aria-invalid="true" та aria-describedby, що дозволяє скрінрідерам краще пояснювати користувачу, що саме він ввів не так.  Навіть з novalidate, такі атрибути як required, pattern, type="email" все одно працюють! Вони залишаються доступними для перевірки через JavaScript (form.checkValidity()), але просто перестають "бісити" користувача стандартними вікнами. -->
 
-                <fieldset>
-                    <legend class="sr-only">Облікові дані</legend>
-                    <div class="form-group">
-                        <label for="full-name">Повне ім’я
-                            <span
-                                class="required-mark"
-                                aria-hidden="true"
-                            >*</span>
-                        </label>
-                        <input
-                            type="text"
-                            name="full-name"
-                            id="full-name"
-                            minlength="2"
-                            placeholder="Михайло Козак"
-                            required
-                            aria-required="true"
-                            autocomplete="name"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <label for="user-email">Email
-                            <span
-                                class="required-mark"
-                                aria-hidden="true"
-                            >*</span>
-                        </label>
-                        <input
-                            type="email"
-                            name="user-email"
-                            id="user-email"
-                            placeholder="kozak@yahoo.com"
-                            required
-                            aria-required="true"
-                            autocomplete="email"
-                            title="Будь ласка, введіть коректний email (наприклад: name@yahoo.com)"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <label for="user-password">Пароль
-                            <span
-                                class="required-mark"
-                                aria-hidden="true"
-                            >*</span>
-                        </label>
-                        <input
-                            type="password"
-                            name="user-password"
-                            id="user-password"
-                            minlength="8"
-                            placeholder="••••••••"
-                            autocomplete="new-password"
-                            required
-                            aria-required="true"
-                        />
-                        <small id="password-hint">Мінімум 8 символів.</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="confirm-user-password">Підтвердження пароля
-                            <span
-                                class="required-mark"
-                                aria-hidden="true"
-                            >*</span>
-                        </label>
-                        <input
-                            type="password"
-                            name="confirm-user-password"
-                            id="confirm-user-password"
-                            placeholder="••••••••"
-                            autocomplete="new-password"
-                            required
-                            aria-required="true"
-                        />
-                        <!-- <small
-                            id="password-error"
-                            class="error-message"
-                        >Паролі не співпадають</small> -->
-                    </div>
-                </fieldset>
+          <fieldset>
+            <legend class="sr-only">Облікові дані</legend>
+            <div class="form-group">
+              <label for="full-name"
+                >Повне ім’я
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="text"
+                name="full-name"
+                id="full-name"
+                minlength="2"
+                placeholder="Михайло Козак"
+                required
+                autocomplete="name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="user-email"
+                >Email
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="email"
+                name="user-email"
+                id="user-email"
+                placeholder="kozak@yahoo.com"
+                required
+                autocomplete="email"
+                title="Будь ласка, введіть коректний email (наприклад: name@yahoo.com)"
+              />
+            </div>
+            <div class="form-group">
+              <label for="user-password"
+                >Пароль
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="password"
+                name="user-password"
+                id="user-password"
+                minlength="8"
+                placeholder="••••••••"
+                autocomplete="new-password"
+                required
+                aria-describedby="password-hint"
+              />
+              <small id="password-hint">Мінімум 8 символів.</small>
+            </div>
+            <div class="form-group">
+              <label for="confirm-user-password"
+                >Підтвердження пароля
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="password"
+                name="confirm-user-password"
+                id="confirm-user-password"
+                placeholder="••••••••"
+                autocomplete="new-password"
+                required
+              />
+              <!-- <small
+                                    id="password-error"
+                                    class="error-message"
+                                >Паролі не співпадають</small> -->
+            </div>
+          </fieldset>
 
-                <fieldset>
-                    <legend class="sr-only">Особиста інформація</legend>
-                    <div class="form-group">
-                        <span id="gender-label">Стать
-                            <span
-                                class="required-mark"
-                                aria-hidden="true"
-                            >*</span>
-                        </span>
-                        <div
-                            role="radiogroup"
-                            id="gender-label"
-                            class="radio-group"
-                            aria-labelledby="gender-label"
-                        >
-                            <input
-                                type="radio"
-                                name="gender"
-                                id="male"
-                                value="male"
-                                required
-                                checked
-                            />
-                            <label for="male">чоловіча</label>
-                            <input
-                                type="radio"
-                                name="gender"
-                                id="female"
-                                value="female"
-                            />
-                            <label for="female">жіноча</label>
-                        </div>
-                    </div>
+          <fieldset>
+            <legend>
+              Стать
+              <span class="required-mark" aria-hidden="true">*</span>
+            </legend>
 
-                    <div class="form-group">
-                        <label for="user-age">Вік
-                            <span
-                                class="required-mark"
-                                aria-hidden="true"
-                            >*</span>
-                        </label>
-                        <input
-                            type="number"
-                            name="user-age"
-                            id="user-age"
-                            min="14"
-                            max="120"
-                            placeholder="18"
-                            required
-                            aria-required="true"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <label for="course">Курс
-                            <span
-                                class="required-mark"
-                                aria-hidden="true"
-                            >*</span>
-                        </label>
-                        <select
-                            name="course"
-                            id="course"
-                            required
-                            aria-required="true"
-                        >
-                            <option
-                                value=""
-                                disabled
-                                hidden
-                                selected
-                            >-=Виберіть курс=-</option>
-                            <option value="frontend">Front-End</option>
-                            <option value="backend">Back-End</option>
-                            <option value="pm">Project Management</option>
-                            <option value="qa">QA Manual</option>
-                        </select>
-                        <div>
-                            <label for="user-address">Повна адреса проживання
-                                <span
-                                    class="required-mark"
-                                    aria-hidden="true"
-                                >*</span>
-                            </label>
-                            <textarea
-                                name="user-address"
-                                id="user-address"
-                                rows="4"
-                                placeholder="Країна, регіон, місто/селище, вулиця"
-                                required
-                                required
-                            ></textarea>
-                        </div>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend class="sr-only">Згода та підтвердження</legend>
-                    <div class="form-group checkbox-container">
-                        <input
-                            type="checkbox"
-                            id="privacy-policy"
-                            name="privacy_policy"
-                            required
-                            aria-required="true"
-                        />
-                        <label for="privacy-policy">Я погоджуюсь з обробкою персональних даних та умовами конфіденційності</label>
-                    </div>
-                </fieldset>
-                <div class="actions">
-                    <button type="reset">Очистити форму</button>
-                    <button type="submit">Зареєструватися</button>
-                </div>
-            </form>
-        </section>
-    </body>
+            <div class="radio-group">
+              <input type="radio" name="gender" id="male" value="male" required checked />
+              <label for="male">чоловіча</label>
+
+              <input type="radio" name="gender" id="female" value="female" />
+              <label for="female">жіноча</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend class="sr-only">Згода та підтвердження</legend>
+            <div class="checkbox-container">
+              <input type="checkbox" id="privacy-policy" name="privacy_policy" required />
+              <label for="privacy-policy"
+                >Я погоджуюсь з обробкою персональних даних та умовами конфіденційності</label
+              >
+            </div>
+          </fieldset>
+          <div class="actions">
+            <button type="reset">Очистити форму</button>
+            <button type="submit">Зареєструватися</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer-container">
+        <p>
+          © 2026 Universal Form System. Розроблено з урахуванням максимальної доступності та
+          різноманітних сценаріїв введення даних.
+        </p>
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <ul class="nav-list">
+            <li><a href="." class="nav-link">Конфіденційність</a></li>
+            <li><a href="." class="nav-link">Безпека</a></li>
+            <li><a href="." class="nav-link">Звіт WCAG</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>
