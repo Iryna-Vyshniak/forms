@@ -2,52 +2,87 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Forms</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Rufina:wght@400;700&family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="./styles/index.css"
+    />
   </head>
-
   <body>
     <header class="site-header">
       <div class="container header-layout">
-        <!-- Accessible Brand Link -->
-        <a href="./index.html" class="brand" aria-label="U Form System Home">
+        <a
+          href="./index.html"
+          class="brand"
+          aria-label="U Form System Home"
+        >
           <!-- aria-hidden on the graphic element since the label reads it out -->
-          <span class="brand-logo" aria-hidden="true">U</span>
+          <span
+            class="brand-logo"
+            aria-hidden="true"
+          >U</span>
           <span class="brand-text">FORM SYSTEM</span>
         </a>
-
-        <!-- Semantic Navigation List -->
-        <nav class="main-nav" aria-label="Main Navigation">
+        <nav
+          class="main-nav"
+          aria-label="Main Navigation"
+        >
           <ul class="nav-list">
-            <li><a href="#basics" class="nav-link">Basic Identity</a></li>
-            <li><a href="#contact" class="nav-link">Communications</a></li>
-            <li><a href="#dates" class="nav-link">Temporal Settings</a></li>
-            <li><a href="#controls" class="nav-link">Advanced Controls</a></li>
-            <li><a href="#files" class="nav-link">Documentation</a></li>
+            <li><a
+                href="#basics"
+                class="nav-link"
+              >Basic Identity</a></li>
+            <li><a
+                href="#contact"
+                class="nav-link"
+              >Communications</a></li>
+            <li><a
+                href="#dates"
+                class="nav-link"
+              >Temporal Settings</a></li>
+            <li><a
+                href="#controls"
+                class="nav-link"
+              >Advanced Controls</a></li>
+            <li><a
+                href="#files"
+                class="nav-link"
+              >Documentation</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main id="main-content" class="container main-content">
+    <main
+      id="main-content"
+      class="container main-content"
+    >
       <h1>Universal Entry Form</h1>
       <p>
         A comprehensive demonstration of HTML5 input capabilities, accessible data structures, and
         logical interface partitioning.
       </p>
-      <form action="." method="post">
+      <form
+        action="."
+        method="post"
+      >
         <!-- Fieldset 1: Basic Identity -->
-        <fieldset id="basics" class="content-fieldset">
+        <fieldset
+          id="basics"
+          class="content-fieldset"
+        >
           <legend class="legend-fieldset">Basic Identity</legend>
           <div class="form-grid">
             <div class="form-group">
-              <label for="full-name"
-                >Full Name
+              <label for="full-name">Full Name
                 <span class="required-mark">*</span>
               </label>
               <input
@@ -64,8 +99,7 @@
             </div>
 
             <div class="form-group">
-              <label for="password"
-                >Password
+              <label for="password">Password
                 <span class="required-mark">*</span>
               </label>
               <input
@@ -95,8 +129,17 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <circle
+                    cx="11"
+                    cy="11"
+                    r="8"
+                  ></circle>
+                  <line
+                    x1="21"
+                    y1="21"
+                    x2="16.65"
+                    y2="16.65"
+                  ></line>
                 </svg>
                 <input
                   type="search"
@@ -109,8 +152,7 @@
             </div>
 
             <div class="form-group">
-              <label for="internal-id"
-                >Internal ID
+              <label for="internal-id">Internal ID
 
                 <span class="required-mark">*</span>
               </label>
@@ -128,12 +170,18 @@
           </div>
         </fieldset>
         <!-- Fieldset 2: Communications -->
-        <fieldset id="contact" class="content-fieldset">
+        <fieldset
+          id="contact"
+          class="content-fieldset"
+        >
           <legend class="legend-fieldset">Communications</legend>
           <div class="form-grid">
             <div class="form-group">
               <label for="email">
-                Email Address <span class="required-mark" aria-hidden="true">*</span>
+                Email Address <span
+                  class="required-mark"
+                  aria-hidden="true"
+                >*</span>
               </label>
 
               <input
@@ -150,7 +198,10 @@
             <div class="form-group">
               <label for="phone">Phone Number <small>Format: +1 (234)-000-0000</small></label>
               <div class="input-wrapper">
-                <div class="input-icon" aria-hidden="true">
+                <div
+                  class="input-icon"
+                  aria-hidden="true"
+                >
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -159,9 +210,7 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   >
-                    <path
-                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                    ></path>
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                   </svg>
                 </div>
                 <input
@@ -178,7 +227,10 @@
             <div class="form-group">
               <label for="portfolio">Portfolio URL</label>
               <div class="input-wrapper">
-                <div class="input-icon" aria-hidden="true">
+                <div
+                  class="input-icon"
+                  aria-hidden="true"
+                >
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -187,11 +239,18 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                    <path
-                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                    ></path>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                    ></circle>
+                    <line
+                      x1="2"
+                      y1="12"
+                      x2="22"
+                      y2="12"
+                    ></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                   </svg>
                 </div>
                 <input
@@ -216,8 +275,16 @@
 
             <div class="form-group">
               <label for="region">Preferred Region</label>
-              <select id="region" name="region">
-                <option value="" disabled selected hidden>Select or type...</option>
+              <select
+                id="region"
+                name="region"
+              >
+                <option
+                  value=""
+                  disabled
+                  selected
+                  hidden
+                >Select or type...</option>
                 <option value="na">North America</option>
                 <option value="eu">Europe</option>
                 <option value="ap">Asia Pacific</option>
@@ -226,12 +293,19 @@
           </div>
         </fieldset>
         <!-- Fieldset 3: Temporal Settings -->
-        <fieldset id="dates" class="content-fieldset">
+        <fieldset
+          id="dates"
+          class="content-fieldset"
+        >
           <legend class="legend-fieldset">Temporal Settings</legend>
           <div class="form-grid">
             <div class="form-group">
               <label for="start-date">Start Date</label>
-              <input type="date" id="start-date" name="start-date" />
+              <input
+                type="date"
+                id="start-date"
+                name="start-date"
+              />
             </div>
 
             <div class="form-group">
@@ -273,12 +347,20 @@
 
             <div class="form-group">
               <label for="project-week">Project Week</label>
-              <input type="week" id="project-week" name="project-week" value="2026-W01" />
+              <input
+                type="week"
+                id="project-week"
+                name="project-week"
+                value="2026-W01"
+              />
             </div>
           </div>
         </fieldset>
         <!-- Fieldset 4: Advanced Controls -->
-        <fieldset id="controls" class="content-fieldset">
+        <fieldset
+          id="controls"
+          class="content-fieldset"
+        >
           <legend class="legend-fieldset">Advanced Controls</legend>
           <div class="form-grid">
             <div class="form-group">
@@ -331,9 +413,7 @@
                 </optgroup>
               </select>
 
-              <small id="access-groups-help"
-                >Hold Cmd on Mac or Ctrl on Windows to select multiple options.</small
-              >
+              <small id="access-groups-help">Hold Cmd on Mac or Ctrl on Windows to select multiple options.</small>
             </div>
 
             <div class="form-group">
@@ -357,15 +437,30 @@
                 <legend>Notification Method</legend>
                 <ul class="radio-group">
                   <li class="radio-item">
-                    <input type="radio" id="notif-push" name="notification" value="push" />
+                    <input
+                      type="radio"
+                      id="notif-push"
+                      name="notification"
+                      value="push"
+                    />
                     <label for="notif-push">Push</label>
                   </li>
                   <li class="radio-item">
-                    <input type="radio" id="notif-sms" name="notification" value="sms" />
+                    <input
+                      type="radio"
+                      id="notif-sms"
+                      name="notification"
+                      value="sms"
+                    />
                     <label for="notif-sms">SMS</label>
                   </li>
                   <li class="radio-item">
-                    <input type="radio" id="notif-email" name="notification" value="email" />
+                    <input
+                      type="radio"
+                      id="notif-email"
+                      name="notification"
+                      value="email"
+                    />
                     <label for="notif-email">Email</label>
                   </li>
                 </ul>
@@ -377,15 +472,28 @@
                 <legend>Privacy Options</legend>
                 <ul>
                   <li class="checkbox-container">
-                    <input type="checkbox" id="priv-marketing" name="privacy-marketing" checked />
+                    <input
+                      type="checkbox"
+                      id="priv-marketing"
+                      name="privacy-marketing"
+                      checked
+                    />
                     <label for="priv-marketing">Receive marketing emails</label>
                   </li>
                   <li class="checkbox-container">
-                    <input type="checkbox" id="priv-public" name="privacy-public" />
+                    <input
+                      type="checkbox"
+                      id="priv-public"
+                      name="privacy-public"
+                    />
                     <label for="priv-public">Make profile public</label>
                   </li>
                   <li class="checkbox-container">
-                    <input type="checkbox" id="priv-2fa" name="privacy-2fa" />
+                    <input
+                      type="checkbox"
+                      id="priv-2fa"
+                      name="privacy-2fa"
+                    />
                     <label for="priv-2fa">Require 2FA</label>
                   </li>
                 </ul>
@@ -395,10 +503,16 @@
         </fieldset>
 
         <!-- Fieldset 5: Documentation -->
-        <fieldset id="files" class="content-fieldset">
+        <fieldset
+          id="files"
+          class="content-fieldset"
+        >
           <legend class="legend-fieldset">Documentation</legend>
           <div class="form-group">
-            <label for="file-upload" class="sr-only">Upload Credentials</label>
+            <label
+              for="file-upload"
+              class="sr-only"
+            >Upload Credentials</label>
 
             <div class="file-upload-area">
               <input
@@ -425,7 +539,12 @@
                   >
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                     <polyline points="17 8 12 3 7 8"></polyline>
-                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                    <line
+                      x1="12"
+                      y1="3"
+                      x2="12"
+                      y2="15"
+                    ></line>
                   </svg>
                   <span>Click to upload files</span>
                   <small id="file-hint">PDF, PNG, or JPG. Maximum size 10MB per file.</small>
@@ -449,11 +568,23 @@
         <p>
           © 2026 Universal Form System. Designed for extreme accessibility and diverse data entry.
         </p>
-        <nav class="footer-nav" aria-label="Footer Navigation">
+        <nav
+          class="footer-nav"
+          aria-label="Footer Navigation"
+        >
           <ul class="nav-list">
-            <li><a href="." class="nav-link">Privacy</a></li>
-            <li><a href="." class="nav-link">Security</a></li>
-            <li><a href="." class="nav-link">WCAG Report</a></li>
+            <li><a
+                href="."
+                class="nav-link"
+              >Privacy</a></li>
+            <li><a
+                href="."
+                class="nav-link"
+              >Security</a></li>
+            <li><a
+                href="."
+                class="nav-link"
+              >WCAG Report</a></li>
           </ul>
         </nav>
       </div>
